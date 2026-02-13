@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Painel Administrativo - Cadastro</title>
+    <title>Painel Administrativo - Nuvem de Essências</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="admin-body">
@@ -16,16 +16,16 @@
             <div class="row">
                 <div class="group">
                     <label>NOME DO PRODUTO</label>
-                    <input type="text" id="nome" placeholder="Ex: Batom Matte Red" required>
+                    <input type="text" id="nome" placeholder="Ex: 212 VIP Rose" required>
                 </div>
                 <div class="group">
                     <label>MARCA / LINHA</label>
-                    <input type="text" id="marca" placeholder="Ex: EUDORA">
+                    <input type="text" id="marca" placeholder="Ex: Carolina Herrera">
                 </div>
             </div>
 
             <div class="group">
-                <label>ORDEM DE EXIBIÇÃO (Ex: 1 para aparecer primeiro)</label>
+                <label>ORDEM DE EXIBIÇÃO (1 para primeiro)</label>
                 <input type="number" id="ordem" value="1">
             </div>
 
@@ -39,20 +39,20 @@
                 </div>
                 <div class="group">
                     <label>CAMINHO DA IMAGEM PRINCIPAL</label>
-                    <input type="text" id="imgPrincipal" placeholder="img/produtos/capa.png">
+                    <input type="text" id="imgPrincipal" placeholder="img/perfume-exemplo.jpg">
                 </div>
             </div>
 
             <fieldset class="variacoes-box">
-                <legend>VARIAÇÕES (CORES OU TAMANHOS)</legend>
+                <legend>VARIAÇÃO (TAMANHO/ESTOQUE)</legend>
                 <div class="row">
                     <div class="group">
-                        <label>COR OU TAMANHO</label>
+                        <label>TAMANHO</label>
                         <input type="text" id="vCor" placeholder="Ex: 100ml">
                     </div>
                     <div class="group">
                         <label>PREÇO BASE</label>
-                        <input type="number" step="0.01" id="vPreco">
+                        <input type="number" step="0.01" id="vPreco" required>
                     </div>
                 </div>
                 <div class="row">
@@ -60,27 +60,23 @@
                         <label>ESTOQUE</label>
                         <input type="number" id="vEstoque" value="1">
                     </div>
-                    <div class="group">
-                        <label>FOTO DESTA OPÇÃO</label>
-                        <input type="text" id="vFoto" placeholder="img/produtos/opcao.png">
-                    </div>
                 </div>
             </fieldset>
 
             <div class="row">
                 <div class="group">
                     <label>DESC. NO PIX (%)</label>
-                    <input type="number" id="descPix" value="0">
+                    <input type="number" id="descPix" value="5">
                 </div>
                 <div class="group">
-                    <label>DESC. CARTÃO ATÉ 6X (%)</label>
+                    <label>DESC. CARTÃO (%)</label>
                     <input type="number" id="descCartao" value="0">
                 </div>
             </div>
 
             <div class="group">
                 <label>DESCRIÇÃO DETALHADA</label>
-                <textarea id="descricao" rows="4" placeholder="Notas, textura, modo de uso..."></textarea>
+                <textarea id="descricao" rows="4"></textarea>
             </div>
 
             <button type="submit" class="btn-save">SALVAR PRODUTO NO FIREBASE</button>
