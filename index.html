@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuvem de Essências | Atacado de Perfumaria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logo-nuvem.png" alt="Nuvem de Essências">
+        </div>
+        <nav>
+            <a href="#">SOBRE NÓS</a>
+            <a href="#">MARCAS</a>
+            <a href="admin.html" class="gold-link">PAINEL ADMIN</a>
+        </nav>
+        <div class="auth-buttons">
+            <button id="btnLogin" class="btn-outline">LOGIN</button>
+            <button id="btnCadastro" class="btn-gold">SEJA NOSSO CLIENTE</button>
+        </div>
+    </header>
+
+    <section class="banner-principal">
+        <div class="banner-content">
+            <h1>ALTA PERFUMARIA NO ATACADO</h1>
+            <p>Preços exclusivos para revendedores aprovados.</p>
+        </div>
+    </section>
+
+    <main class="vitrine">
+        <h2>Nossas Fragrâncias</h2>
+        <div id="lista-produtos" class="grid-produtos">
+            <div class="card-produto">
+                <img src="img/exemplo-perfume.jpg" alt="Perfume">
+                <h3>Nome do Perfume</h3>
+                <p class="brand">Marca do Perfume</p>
+                <div class="price-box">
+                    <span class="price-locked">R$ --,--</span>
+                    <small>Acesse para ver o preço</small>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
