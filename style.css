@@ -1,95 +1,124 @@
+/* Definição de Cores e Variáveis */
 :root {
     --azul-escuro: #000c1d;
-    --azul-card: #001a33;
+    --azul-card: #001226;
     --dourado: #c5a059;
     --dourado-claro: #fcf6ba;
-    --gradiente-gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728);
+    --gradiente-gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     --branco: #ffffff;
+    --preto-puro: #00050a;
 }
 
+/* Configuração Geral */
 body {
     background-color: var(--azul-escuro);
     color: var(--branco);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-/* Header Estilo Paris */
+/* Header/Navbar Organizada */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background: rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid var(--dourado);
+    padding: 20px 8%; /* Respiro lateral maior */
+    background: var(--preto-puro);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo img { height: 60px; }
+.logo img { 
+    height: 50px; 
+    width: auto;
+}
 
 nav a {
     color: var(--branco);
     text-decoration: none;
     margin: 0 15px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+/* Botões de Ação */
+.btn-outline {
+    background: transparent;
+    color: var(--branco);
+    border: 1px solid var(--branco);
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--branco);
+    color: var(--preto-puro);
 }
 
 .btn-gold {
     background: var(--gradiente-gold);
     color: #000;
     border: none;
-    padding: 10px 20px;
+    padding: 11px 22px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 4px;
-}
-
-/* Estilo do Painel Admin */
-.admin-container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: var(--azul-card);
-    padding: 30px;
-    border: 1px solid #c5a05955;
-    border-radius: 8px;
-}
-
-.admin-header h1 {
-    color: var(--dourado);
-    text-align: center;
-    font-family: 'Cinzel', serif;
-}
-
-.admin-form label {
-    display: block;
+    border-radius: 2px;
+    text-transform: uppercase;
     font-size: 12px;
+}
+
+/* Banner de Impacto (Igual à Distribuidora Paris) */
+.banner-principal {
+    padding: 100px 8%;
+    background: linear-gradient(90deg, var(--azul-escuro) 35%, transparent 100%), 
+                url('https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1974&auto=format&fit=crop'); 
+    background-size: cover;
+    background-position: center right;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--branco);
+    max-width: 500px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.banner-content p {
     color: var(--dourado);
-    margin-bottom: 5px;
+    font-size: 1.1rem;
     margin-top: 15px;
 }
 
-.admin-form input, .admin-form select, .admin-form textarea {
-    width: 100%;
-    padding: 10px;
-    background: #000814;
-    border: 1px solid #333;
-    color: white;
-    border-radius: 4px;
+/* Vitrine e Grid de Produtos */
+.vitrine {
+    padding: 60px 8%;
 }
 
-.btn-save {
-    width: 100%;
-    margin-top: 30px;
-    padding: 15px;
-    background: var(--gradiente-gold);
-    border: none;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
+.vitrine h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--dourado);
+    margin-bottom: 40px;
 }
 
-.price-locked {
-    background: #444;
-    padding: 5px 10px;
-    filter: blur(4px);
-}
+.grid-produtos {
+    display: grid;
