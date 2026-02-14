@@ -266,5 +266,10 @@ nav a:hover, .gold-link {
     margin: 0;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
 }
+.slide {
+    background-size: cover !important; /* Faz a foto preencher todo o espaço */
+    background-position: center right !important; /* Mantém o foco no perfume (direita) */
+    background-repeat: no-repeat !important;
+}
 
 
