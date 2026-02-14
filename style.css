@@ -285,20 +285,21 @@ nav a:hover, .gold-link {
     opacity: 1 !important;
 }
 
-/* Garante que o texto não "atropele" o perfume */
-.banner-content {
-    max-width: 550px;
-    z-index: 10;
-    /* Melhora a leitura das letras brancas sobre o fundo brilhante */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); 
-    /* Garante que o texto não cole no topo ou na base */
-    margin-left: 5%; 
+.banner-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.8rem; /* Aumenta um pouco para dar imponência */
+    line-height: 1.1;
+    color: #ffffff;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9); /* Sombra para destacar do fundo */
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
-.banner-content {
-    max-width: 550px;
-    z-index: 10;
-    /* Melhora a leitura das letras brancas sobre o fundo brilhante */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); 
-    /* Garante que o texto não cole no topo ou na base */
-    margin-left: 5%; 
+
+.banner-content p {
+    font-size: 1.1rem;
+    /* Dourado champagne que combina com o perfume */
+    color: #e2c275; 
+    margin-top: 15px;
+    font-weight: 400;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
