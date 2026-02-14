@@ -96,15 +96,6 @@ nav a:hover, .gold-link {
     letter-spacing: 0.5px;
 }
 
-/* Configuração do Slider - Corrigida para visual Luxo */
-.banner-slider {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Aumentamos um pouco para dar mais presença */
-    overflow: hidden;
-    background-color: var(--preto-puro);
-}
-
 .slide {
     position: absolute;
     top: 0;
@@ -112,27 +103,28 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* Mudamos para COVER e ajustamos a posição para 80% (traz o perfume mais para o centro-direita) */
-    background-size: cover !important; 
-    background-position: 80% center !important; 
-    background-repeat: no-repeat !important;
+    /* MUDANÇA CRUCIAL AQUI */
+    background-size: contain !important; /* Faz o perfume caber inteiro na altura do banner */
+    background-position: right center !important; /* Cola o perfume no lado direito */
+    background-repeat: no-repeat !important; /* Impede que a imagem duplique */
     
     opacity: 0;
     transition: opacity 1.2s ease-in-out;
     display: flex;
     align-items: center;
     padding: 0 8%;
+    
+    /* Adicionamos isso para o fundo não ficar vazio onde a imagem não chegar */
+    background-color: var(--azul-escuro); 
 }
 
 .slide.active {
     opacity: 1 !important;
 }
 
-/* O conteúdo do banner ganha um degradê mais denso para fundir com a imagem */
 .banner-content {
-    max-width: 500px;
+    max-width: 50%; /* Garante que o texto não suba no perfume */
     z-index: 10;
-    position: relative;
 }
 
 .banner-content h1 {
