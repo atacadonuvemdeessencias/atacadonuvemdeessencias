@@ -103,27 +103,27 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* MUDANÇA CRUCIAL AQUI */
-    background-size: contain !important; /* Faz o perfume caber inteiro na altura do banner */
-    background-position: right center !important; /* Cola o perfume no lado direito */
-    background-repeat: no-repeat !important; /* Impede que a imagem duplique */
+    /* AJUSTE DEFINITIVO DE VISIBILIDADE */
+    background-size: contain !important; /* Mantém a proporção real do frasco */
+    background-position: 75% center !important; /* PUXA O PERFUME PARA DENTRO DA TELA */
+    background-repeat: no-repeat !important;
     
     opacity: 0;
-    transition: opacity 1.2s ease-in-out;
+    transition: opacity 1s ease-in-out;
     display: flex;
     align-items: center;
     padding: 0 8%;
-    
-    /* Adicionamos isso para o fundo não ficar vazio onde a imagem não chegar */
-    background-color: var(--azul-escuro); 
+    background-color: var(--preto-puro); /* Garante que o fundo seja preto onde não houver imagem */
 }
 
+/* Garante que o slide ativo apareça */
 .slide.active {
     opacity: 1 !important;
 }
 
+/* Ajuste do conteúdo para não cobrir o perfume */
 .banner-content {
-    max-width: 50%; /* Garante que o texto não suba no perfume */
+    max-width: 450px;
     z-index: 10;
 }
 
