@@ -130,20 +130,21 @@ nav a:hover, .gold-link {
 
 /* --- AJUSTE: DOLCE & GABBANA --- */
 .slide-dg {
-    background-size: auto 85% !important; /* Altura controlada do frasco */
-    background-position: 75% center !important; 
+    background-size: auto 80% !important; /* Diminuído levemente para padrão de luxo */
+    background-position: 80% center !important; 
     background-color: var(--preto-puro);
 }
 
-/* --- AJUSTE: DIOR (CORRIGIDO) --- */
+/* --- AJUSTE: DIOR (FIXANDO O LIMITE) --- */
 .slide-dior {
-    /* Força o frasco a ficar dentro do limite de 450px com respiro */
-    background-size: auto 75% !important; 
-    background-position: 75% center !important; 
+    /* Diminuímos para 70% para garantir que ele não toque as bordas do banner de 450px */
+    background-size: auto 70% !important; 
+    /* Empurramos para 80% para o frasco largo não bater no texto */
+    background-position: 80% center !important; 
     background-color: #05070a;
     
-    /* Aumenta a vivacidade da imagem para não parecer apagada */
-    filter: contrast(1.1) brightness(1.2); 
+    /* Filtro para tirar o aspecto "apagado" e dar brilho ao vidro */
+    filter: saturate(1.2) brightness(1.1) contrast(1.1); 
 }
 
 /* --- TEXTOS (PADRONIZADOS) --- */
