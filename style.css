@@ -137,45 +137,43 @@ nav a:hover, .gold-link {
     color: #e2c275; /* Dourado luxo DG */
 }
 
-/* --- AJUSTE DIOR (INTEGRAÇÃO TOTAL) --- */
-.slide-dior {
-    background-color: #080c12 !important; 
-    background-size: auto 80% !important; /* Aumentado para preencher melhor o espaço */
-    background-position: 82% center !important; 
-    
-    /* Máscara radial para suavizar TODAS as bordas da imagem, não só as laterais */
-    mask-image: radial-gradient(circle at 80%, black 40%, transparent 95%);
-    -webkit-mask-image: radial-gradient(circle at 80%, black 40%, transparent 95%);
-}
-
-/* --- TEXTO DIOR COM VIDA E IMPACTO --- */
+/* --- TEXTO DIOR COM VIDA MÁXIMA --- */
 .slide-dior .banner-content h1 {
-    color: #ffffff !important;
-    font-family: 'Cinzel', serif; /* Fonte clássica de luxo */
-    font-weight: 800;
-    font-size: 4rem; /* Aumentado para dar mais presença */
-    letter-spacing: 12px; /* Espaçamento largo digno de grife */
+    color: #ffffff !important; /* Branco Puro */
+    font-weight: 900;
+    font-size: 4.5rem;
     text-transform: uppercase;
+    letter-spacing: 15px; /* Espaçamento de grife de luxo */
     
-    /* Camadas de sombra: a primeira cria nitidez, a segunda cria um brilho (glow) */
+    /* Efeito de Vidro/Brilho: cria uma aura clara ao redor da letra */
     text-shadow: 
-        0 0 15px rgba(0, 0, 0, 1), 
-        0 0 30px rgba(255, 255, 255, 0.3); 
+        0 0 10px rgba(255, 255, 255, 0.4), 
+        0 0 25px rgba(255, 255, 255, 0.2),
+        4px 4px 15px rgba(0, 0, 0, 1); /* Sombra preta para dar profundidade */
     
-    filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.8));
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    filter: brightness(1.2);
 }
 
 .slide-dior .banner-content p {
-    /* COR RECOMENDADA: Prata Diamante (#e0e6ed) 
-       Ela é mais viva que o cinza e mais elegante que o branco puro */
-    color: #e0e6ed !important; 
-    font-size: 1.3rem;
+    color: #f0f4f8 !important; /* Prata Vivo (mais claro que o anterior) */
+    font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
     
-    /* Linha decorativa dourada fina abaixo da frase para conectar com o logo */
-    border-left: 3px solid var(--dourado);
-    padding-left: 15px;
+    /* Linha decorativa para dar o toque final de "vida" */
+    border-left: 4px solid #ffffff;
+    padding-left: 20px;
+    opacity: 0.9;
+}
+
+.slide-dior {
+    background-color: #000c1d !important; /* Cor que casa com o seu :root azul-escuro */
+    background-size: auto 82% !important;
+    background-position: 85% center !important;
+    
+    /* Máscara para garantir que a imagem não tenha bordas secas */
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
