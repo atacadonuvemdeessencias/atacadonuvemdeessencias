@@ -19,26 +19,25 @@ body {
     overflow-x: hidden;
 }
 
-/* --- HEADER / NAVBAR ORGANIZADA --- */
+/* --- HEADER / NAVBAR --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%; /* Ajustado para melhor respiro */
+    padding: 10px 5%;
     background: var(--preto-puro);
     border-bottom: 1px solid rgba(197, 160, 89, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 70px; /* Altura fixa para alinhar tudo */
+    height: 70px;
 }
 
 .logo img { 
-    height: 50px; /* Tamanho proporcional ao menu */
+    height: 50px;
     width: auto;
 }
 
-/* Menu Central */
 nav {
     display: flex;
     align-items: center;
@@ -58,7 +57,6 @@ nav a:hover, .gold-link {
     color: var(--dourado) !important;
 }
 
-/* Grupo de Botões à Direita */
 .auth-buttons {
     display: flex;
     align-items: center;
@@ -100,7 +98,7 @@ nav a:hover, .gold-link {
 .banner-slider {
     position: relative;
     width: 100%;
-    height: 450px; /* Altura fixa para garantir a proporção */
+    height: 450px;
     overflow: hidden;
     background-color: var(--preto-puro);
 }
@@ -118,9 +116,9 @@ nav a:hover, .gold-link {
     transition: opacity 1s ease-in-out;
     background-repeat: no-repeat !important;
 
-    /* ESTE É O CÓDIGO CHAVE: Ele esfumaça as 4 bordas da imagem */
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    /* Máscara Geral para suavizar as extremidades do banner */
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .slide.active {
@@ -128,38 +126,58 @@ nav a:hover, .gold-link {
     z-index: 1;
 }
 
-/* --- AJUSTE DG --- */
+/* --- AJUSTE DOLCE & GABBANA --- */
 .slide-dg {
     background-size: auto 82% !important;
     background-position: 80% center !important;
     background-color: #00050a;
 }
 
-/* --- ESTILO ESPECÍFICO DIOR --- */
+.slide-dg .banner-content p { 
+    color: #e2c275; /* Dourado luxo DG */
+}
+
+/* --- AJUSTE DIOR (FINALIZADO) --- */
+.slide-dior {
+    /* Cor que funde com a fumaça da Dior */
+    background-color: #080c12 !important; 
+    background-size: auto 78% !important;
+    background-position: 85% center !important;
+    
+    /* Máscara lateral mais agressiva para apagar qualquer borda da imagem */
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
 .slide-dior .banner-content h1 {
-    color: #ffffff;
-    /* Sombra suave para garantir que o nome não suma na fumaça clara */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    color: #f8f9fa; /* Branco gelo para maior nitidez */
+    /* Sombra pesada para o nome Dior "saltar" da fumaça clara */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
 }
 
 .slide-dior .banner-content p {
-    /* Cor prata levemente azulada para harmonizar com o Sauvage */
-    color: #b0c4de !important; 
-    font-weight: 500;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    /* Cor prata metálica azulada para combinar com o Sauvage */
+    color: #a0acbd !important;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.slide-dior {
-    /* Cor de fundo que "puxa" o tom da fumaça da imagem */
-    background-color: #080c12 !important; 
-    background-size: auto 75% !important;
-    background-position: 85% center !important;
-    
-    /* Máscara melhorada para fundir a imagem lateralmente sem bordas visíveis */
-    mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+/* --- TEXTOS GERAIS --- */
+.banner-content {
+    max-width: 550px;
+    z-index: 2;
 }
-/* Cores específicas das fontes */
-.slide-dg .banner-content p { color: #e2c275; } /* Dourado DG */
-.slide-dior .banner-content p { color: #e5e5e5; } /* Prata Dior */
+
+.banner-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+}
