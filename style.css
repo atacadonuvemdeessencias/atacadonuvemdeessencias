@@ -137,22 +137,19 @@ nav a:hover, .gold-link {
     color: #e2c275; /* Dourado luxo DG */
 }
 
-/* --- ESTILO LUXO DIOR (VERSÃO FINAL ORGANIZADA) --- */
+/* --- ESTILO LUXO DIOR (VERSÃO FINAL) --- */
 .slide-dior {
-    /* Base escura idêntica ao fundo do Dolce & Gabbana para o branco brilhar */
     background-color: #000c1d !important; 
     background-size: contain !important;
-    /* Afasta o perfume para a direita, criando o espaço negro para o texto */
+    /* Afasta o perfume para a direita, criando o fundo escuro para o texto */
     background-position: 95% center !important; 
     
-    /* MÁSCARA RADIAL: Remove os "quadrados" e esfumaça a imagem perfeitamente */
+    /* MÁSCARA RADIAL: Esfumaça as bordas da imagem perfeitamente */
     mask-image: radial-gradient(circle at 85% 50%, black 45%, transparent 95%);
     -webkit-mask-image: radial-gradient(circle at 85% 50%, black 45%, transparent 95%);
 }
 
-/* --- CONTEÚDO: POSICIONAMENTO E REGRAS --- */
 .slide-dior .banner-content {
-    /* Limita a largura para o texto nunca "atropelar" a imagem do perfume */
     max-width: 450px; 
     text-align: left;
     z-index: 10;
@@ -162,33 +159,30 @@ nav a:hover, .gold-link {
 .slide-dior .banner-content h1 {
     color: #FFFFFF !important; 
     font-weight: 800;
-    font-size: 4.8rem;
-    /* Espaçamento largo de grife, como no exemplo D&G */
-    letter-spacing: 18px; 
+    font-size: 5rem; /* Aumentado para impacto total */
+    letter-spacing: 18px; /* Estilo luxo */
     text-transform: uppercase;
     
-    /* Sombra de Alta Definição: Protege o branco contra a fumaça cinza */
+    /* Sombra de Alta Definição: Cria um escudo contra a fumaça clara */
     text-shadow: 
-        0 0 20px rgba(255, 255, 255, 0.3), 
+        0 0 20px rgba(255, 255, 255, 0.4), 
         4px 4px 15px rgba(0, 0, 0, 1),      
         0 0 10px rgba(0, 0, 0, 0.8);
     
     margin-bottom: 15px;
-    /* Filtro para o branco ficar "aceso" e vibrante */
-    filter: brightness(1.2); 
+    filter: brightness(1.3); /* Força o branco a ficar "aceso" */
 }
 
 /* --- FRASE: BRANCO ACETINADO --- */
 .slide-dior .banner-content p {
     color: #FFFFFF !important; 
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 1.5px;
     
-    /* Sombra reforçada para leitura instantânea */
+    /* Sombra pesada para leitura instantânea */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
     
-    /* Detalhe lateral elegante */
     border-left: 4px solid #FFFFFF;
     padding-left: 20px;
 }
