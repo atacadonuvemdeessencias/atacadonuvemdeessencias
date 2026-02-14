@@ -137,52 +137,58 @@ nav a:hover, .gold-link {
     color: #e2c275; /* Dourado luxo DG */
 }
 
-/* --- ESTILO LUXO DIOR (SEM BORDAS E COM TONALIDADE PRESERVADA) --- */
+/* --- ESTILO LUXO DIOR (VERSÃO FINAL ORGANIZADA) --- */
 .slide-dior {
-    background-color: #000c1d !important; /* Mantém a base escura para o texto brilhar */
-    background-size: contain !important; 
-    background-position: 92% center !important; /* Move o perfume levemente para a direita, dando respiro */
+    /* Base escura idêntica ao fundo do Dolce & Gabbana para o branco brilhar */
+    background-color: #000c1d !important; 
+    background-size: contain !important;
+    /* Afasta o perfume para a direita, criando o espaço negro para o texto */
+    background-position: 95% center !important; 
     
-    /* MÁSCARA RADIAL: O segredo para sumir com os quadrados da imagem sem tirar o brilho central */
-    mask-image: radial-gradient(circle at 85% 50%, black 40%, transparent 95%);
-    -webkit-mask-image: radial-gradient(circle at 85% 50%, black 40%, transparent 95%);
+    /* MÁSCARA RADIAL: Remove os "quadrados" e esfumaça a imagem perfeitamente */
+    mask-image: radial-gradient(circle at 85% 50%, black 45%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle at 85% 50%, black 45%, transparent 95%);
 }
 
-/* --- AJUSTE DE CONTEÚDO (EVITA QUE A FRASE TOQUE NO PERFUME) --- */
+/* --- CONTEÚDO: POSICIONAMENTO E REGRAS --- */
 .slide-dior .banner-content {
-    max-width: 420px; /* Reduzido para garantir que a frase não ultrapasse para a área clara */
+    /* Limita a largura para o texto nunca "atropelar" a imagem do perfume */
+    max-width: 450px; 
     text-align: left;
     z-index: 10;
 }
 
 /* --- NOME DA MARCA: BRANCO DIAMANTE VIVO --- */
 .slide-dior .banner-content h1 {
-    color: #FFFFFF !important; /* Branco puro e vibrante */
+    color: #FFFFFF !important; 
     font-weight: 800;
-    font-size: 4.8rem; /* Aumentado para maior imposição visual */
-    letter-spacing: 18px; /* Espaçamento ultra-luxo */
+    font-size: 4.8rem;
+    /* Espaçamento largo de grife, como no exemplo D&G */
+    letter-spacing: 18px; 
     text-transform: uppercase;
     
-    /* Efeito de Profundidade: Sombra projetada para separar o texto da fumaça */
+    /* Sombra de Alta Definição: Protege o branco contra a fumaça cinza */
     text-shadow: 
-        0 0 20px rgba(255, 255, 255, 0.25), /* Brilho leve perolado */
-        4px 4px 15px rgba(0, 0, 0, 1),      /* Contorno escuro para nitidez absoluta */
-        -2px -2px 10px rgba(0, 0, 0, 0.8);
+        0 0 20px rgba(255, 255, 255, 0.3), 
+        4px 4px 15px rgba(0, 0, 0, 1),      
+        0 0 10px rgba(0, 0, 0, 0.8);
     
     margin-bottom: 15px;
+    /* Filtro para o branco ficar "aceso" e vibrante */
+    filter: brightness(1.2); 
 }
 
-/* --- FRASE: PRATA DIAMANTE --- */
+/* --- FRASE: BRANCO ACETINADO --- */
 .slide-dior .banner-content p {
-    color: #F0F4F8 !important; /* Prata muito claro para destaque máximo */
+    color: #FFFFFF !important; 
     font-size: 1.25rem;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     
-    /* Sombra pesada para garantir leitura em qualquer parte da fumaça */
-    text-shadow: 2px 2px 12px rgba(0, 0, 0, 1);
+    /* Sombra reforçada para leitura instantânea */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
     
-    border-left: 4px solid #FFFFFF; /* Detalhe branco vivo à esquerda */
+    /* Detalhe lateral elegante */
+    border-left: 4px solid #FFFFFF;
     padding-left: 20px;
-    max-width: 420px; /* Mantém o texto longe do perfume */
 }
