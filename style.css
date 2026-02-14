@@ -135,39 +135,31 @@ nav a:hover, .gold-link {
     background-color: #00050a;
 }
 
-/* --- AJUSTE DIOR: Recuperando o Destaque --- */
+/* --- ESTILO ESPECÍFICO DIOR --- */
+.slide-dior .banner-content h1 {
+    color: #ffffff;
+    /* Sombra suave para garantir que o nome não suma na fumaça clara */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.slide-dior .banner-content p {
+    /* Cor prata levemente azulada para harmonizar com o Sauvage */
+    color: #b0c4de !important; 
+    font-weight: 500;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
 .slide-dior {
-    /* Cor base extraída da fumaça da Dior para eliminar o contraste com o preto */
-    background-color: #0c121a !important; 
+    /* Cor de fundo que "puxa" o tom da fumaça da imagem */
+    background-color: #080c12 !important; 
     background-size: auto 75% !important;
-    background-position: 80% center !important;
+    background-position: 85% center !important;
     
-    /* Filtro para suavizar a imagem e misturar as cores */
-    filter: contrast(1.05) brightness(1.1);
-
-    /* Máscara radial: escurece as bordas da imagem em círculo, focando no perfume */
-    mask-image: radial-gradient(circle at 80%, black 30%, transparent 95%);
-    -webkit-mask-image: radial-gradient(circle at 80%, black 30%, transparent 95%);
+    /* Máscara melhorada para fundir a imagem lateralmente sem bordas visíveis */
+    mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
 }
-/* Ajuste de respiro do texto para não colarem no canto */
-.banner-content {
-    padding-left: 20px; 
-    max-width: 550px;
-}
-
-.banner-content h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3.5rem;
-    color: var(--branco);
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.banner-content p {
-    font-size: 1.1rem;
-    margin-top: 15px;
-}
-
 /* Cores específicas das fontes */
 .slide-dg .banner-content p { color: #e2c275; } /* Dourado DG */
 .slide-dior .banner-content p { color: #e5e5e5; } /* Prata Dior */
