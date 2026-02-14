@@ -303,3 +303,11 @@ nav a:hover, .gold-link {
     font-weight: 400;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
+.slide-dior {
+    /* Isso vai "esfumar" as bordas laterais da sua imagem dior.png */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    
+    /* Garante que o fundo do banner seja o azul escuro da Dior */
+    background-color: #0a0d10 !important;
+}
