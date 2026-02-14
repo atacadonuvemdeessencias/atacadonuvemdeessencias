@@ -34,7 +34,7 @@ body {
 }
 
 .logo img { 
-    height: 45px; /* Tamanho proporcional ao menu */
+    height: 50px; /* Tamanho proporcional ao menu */
     width: auto;
 }
 
@@ -266,24 +266,28 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* Ajuste para Imagem não esticar e manter nitidez */
-    background-size: contain !important; 
-    background-position: right center !important; 
+    /* Configurações de Luxo */
+    background-size: cover !important; 
+    background-position: 85% center !important; /* Move o perfume para 85% da largura, centralizando-o melhor */
     background-repeat: no-repeat !important;
     
-    opacity: 0; /* Começa invisível para o efeito de fade */
-    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
     display: flex;
     align-items: center;
     padding: 0 8%;
 }
-
 /* ESTA É A CLASSE QUE FAZ A IMAGEM APARECER - NÃO REMOVA */
 .slide.active {
     opacity: 1 !important;
 }
 
-.banner-content {
-    max-width: 50%;
-    z-index: 10;
+/* Garante que o texto tenha prioridade visual */
+.banner-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.2rem;
+    color: var(--branco);
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.9);
+    margin: 0;
+    line-height: 1.1;
 }
