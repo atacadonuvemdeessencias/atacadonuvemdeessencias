@@ -137,43 +137,38 @@ nav a:hover, .gold-link {
     color: #e2c275; /* Dourado luxo DG */
 }
 
-/* --- TEXTO DIOR COM VIDA MÁXIMA --- */
+/* --- ESTILO LUXO DIOR (SEM BORDAS) --- */
+.slide-dior {
+    background-color: #000c1d !important; 
+    background-size: contain !important; /* 'contain' evita que a imagem corte ou estoure */
+    background-position: 90% center !important; /* Move o perfume mais para a direita */
+    
+    /* MÁSCARA RADIAL: Esfumaça as bordas em círculo, eliminando os quadrados visíveis */
+    mask-image: radial-gradient(circle at 85% 50%, black 30%, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at 85% 50%, black 30%, transparent 85%);
+}
+
+/* --- AJUSTE DE CONTEÚDO (PARA NÃO ATROPELAR) --- */
+.slide-dior .banner-content {
+    max-width: 450px; /* Limita o texto para ele não chegar no perfume */
+    text-align: left;
+}
+
 .slide-dior .banner-content h1 {
-    color: #ffffff !important; /* Branco Puro */
-    font-weight: 900;
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    letter-spacing: 15px; /* Espaçamento de grife de luxo */
-    
-    /* Efeito de Vidro/Brilho: cria uma aura clara ao redor da letra */
-    text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.4), 
-        0 0 25px rgba(255, 255, 255, 0.2),
-        4px 4px 15px rgba(0, 0, 0, 1); /* Sombra preta para dar profundidade */
-    
-    margin-bottom: 10px;
-    filter: brightness(1.2);
+    color: #ffffff !important;
+    font-size: 4rem;
+    letter-spacing: 15px; /* Estilo luxo */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 5px 15px rgba(0,0,0,0.9);
+    margin-bottom: 20px;
 }
 
 .slide-dior .banner-content p {
-    color: #f0f4f8 !important; /* Prata Vivo (mais claro que o anterior) */
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
-    
-    /* Linha decorativa para dar o toque final de "vida" */
-    border-left: 4px solid #ffffff;
+    color: #f0f4f8 !important;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    /* Adiciona uma margem para separar visualmente do perfume */
+    padding-right: 20px; 
+    border-left: 3px solid #ffffff;
     padding-left: 20px;
-    opacity: 0.9;
-}
-
-.slide-dior {
-    background-color: #000c1d !important; /* Cor que casa com o seu :root azul-escuro */
-    background-size: auto 82% !important;
-    background-position: 85% center !important;
-    
-    /* Máscara para garantir que a imagem não tenha bordas secas */
-    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
