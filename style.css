@@ -112,11 +112,11 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* 1. Faz o frasco aparecer do topo à base sem cortes */
-    background-size: contain !important; 
+    /* 1. Faz o perfume crescer (ajuste de 50% a 70% conforme seu gosto) */
+    background-size: 65% !important; 
     
-    /* 2. Centraliza à direita, mas empurra 150px para dentro da tela */
-    background-position: calc(100% - 150px) center !important; 
+    /* 2. Posição: Traz o perfume para mais perto do centro */
+    background-position: right 5% center !important; 
     background-repeat: no-repeat !important;
     
     opacity: 0;
@@ -130,7 +130,6 @@ nav a:hover, .gold-link {
 .slide.active {
     opacity: 1 !important;
 }
-
 .banner-content {
     max-width: 500px;
     z-index: 10;
