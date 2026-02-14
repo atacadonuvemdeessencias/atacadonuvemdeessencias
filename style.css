@@ -137,12 +137,17 @@ nav a:hover, .gold-link {
 
 /* --- AJUSTE DIOR: Recuperando o Destaque --- */
 .slide-dior {
-    background-size: auto 75% !important; /* Aumentado de 68 para 75 para dar mais presença */
-    background-position: 85% center !important; /* Empurrado um pouco mais para a direita */
-    background-color: #05070a;
+    /* Cor base extraída da fumaça da Dior para eliminar o contraste com o preto */
+    background-color: #0c121a !important; 
+    background-size: auto 75% !important;
+    background-position: 80% center !important;
     
-    /* Filtro para o frasco brilhar mais e não ficar opaco */
-    filter: brightness(1.2) contrast(1.1) saturate(1.1); 
+    /* Filtro para suavizar a imagem e misturar as cores */
+    filter: contrast(1.05) brightness(1.1);
+
+    /* Máscara radial: escurece as bordas da imagem em círculo, focando no perfume */
+    mask-image: radial-gradient(circle at 80%, black 30%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle at 80%, black 30%, transparent 95%);
 }
 /* Ajuste de respiro do texto para não colarem no canto */
 .banner-content {
