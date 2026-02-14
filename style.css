@@ -96,6 +96,15 @@ nav a:hover, .gold-link {
     letter-spacing: 0.5px;
 }
 
+/* --- CONFIGURAÇÃO DO SLIDER (ESTILO ÚNICO) --- */
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Aumentei a altura para o perfume aparecer melhor */
+    overflow: hidden;
+    background-color: var(--preto-puro);
+}
+
 .slide {
     position: absolute;
     top: 0;
@@ -103,9 +112,9 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* AJUSTE DEFINITIVO DE VISIBILIDADE */
-    background-size: contain !important; /* Mantém a proporção real do frasco */
-    background-position: 75% center !important; /* PUXA O PERFUME PARA DENTRO DA TELA */
+    /* AJUSTE PARA O PERFUME APARECER SEM CORTES */
+    background-size: contain !important; 
+    background-position: center right 15% !important; /* Fixa o perfume na direita com margem */
     background-repeat: no-repeat !important;
     
     opacity: 0;
@@ -113,26 +122,28 @@ nav a:hover, .gold-link {
     display: flex;
     align-items: center;
     padding: 0 8%;
-    background-color: var(--preto-puro); /* Garante que o fundo seja preto onde não houver imagem */
+    z-index: 1;
 }
 
-/* Garante que o slide ativo apareça */
+/* CLASSE ATIVA - OBRIGATÓRIA */
 .slide.active {
     opacity: 1 !important;
+    z-index: 2;
 }
 
-/* Ajuste do conteúdo para não cobrir o perfume */
 .banner-content {
-    max-width: 450px;
+    max-width: 500px;
     z-index: 10;
+    position: relative;
 }
 
 .banner-content h1 {
     font-family: 'Cinzel', serif;
-    font-size: 3.5rem; /* Letras maiores e mais imponentes */
+    font-size: 3.5rem;
     color: var(--branco);
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
-    margin-bottom: 10px;
+    text-shadow: 2px 2px 25px rgba(0,0,0,0.9);
+    margin: 0;
+    line-height: 1.1;
 }
 
 /* --- GRID DE PRODUTOS --- */
