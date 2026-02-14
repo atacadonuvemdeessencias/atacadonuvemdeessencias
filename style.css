@@ -268,13 +268,13 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* 1. FAZ O PERFUME APARECER INTEIRO: trava a altura e deixa a largura livre */
+    /* 1. Tamanho: auto 85% garante que o frasco não seja cortado */
     background-size: auto 85% !important; 
     
-    /* 2. POSIÇÃO: coloca o perfume na direita, mas traz ele 10% para dentro da tela */
-    background-position: right 10% center !important; 
-    background-repeat: no-repeat !important;
+    /* 2. Posição: 60% traz ele para bem perto do nome Dolce & Gabbana */
+    background-position: 60% center !important; 
     
+    background-repeat: no-repeat !important;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
@@ -282,7 +282,6 @@ nav a:hover, .gold-link {
     padding: 0 8%;
     background-color: var(--azul-escuro);
 }
-
 .slide.active {
     opacity: 1 !important;
 }
