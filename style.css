@@ -154,21 +154,35 @@ nav a:hover, .gold-link {
     text-align: left;
 }
 
+/* --- NOME DA MARCA: BRANCO DIAMANTE PEROLADO --- */
 .slide-dior .banner-content h1 {
-    color: #ffffff !important;
-    font-size: 4rem;
-    letter-spacing: 15px; /* Estilo luxo */
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 5px 15px rgba(0,0,0,0.9);
-    margin-bottom: 20px;
+    /* Cor Branco Diamante Puro com brilho */
+    color: #FFFFFF !important; 
+    font-weight: 800;
+    letter-spacing: 15px; /* Estilo grife Dior */
+    text-transform: uppercase;
+    
+    /* Efeito Diamante: Sombra que cria nitidez e um leve brilho externo (glow) */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.5), 
+        0 0 20px rgba(255, 255, 255, 0.2),
+        4px 4px 15px rgba(0, 0, 0, 0.9); /* Protege a letra contra a fumaça clara */
+    
+    filter: brightness(1.1) contrast(1.1);
 }
 
+/* --- FRASE: PRATA ACETINADO --- */
 .slide-dior .banner-content p {
-    color: #f0f4f8 !important;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    /* Adiciona uma margem para separar visualmente do perfume */
-    padding-right: 20px; 
-    border-left: 3px solid #ffffff;
+    /* Cor Prata Acetinado (#D1D9E6) - Harmoniza com o frasco do Sauvage */
+    color: #D1D9E6 !important; 
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    
+    /* Sombra profunda para garantir leitura instantânea */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    
+    /* Detalhe de luxo: uma pequena borda branca à esquerda */
+    border-left: 3px solid #FFFFFF;
     padding-left: 20px;
 }
