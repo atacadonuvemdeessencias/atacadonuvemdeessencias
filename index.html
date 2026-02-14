@@ -80,5 +80,17 @@
     </main>
 
     <script type="module" src="app.js"></script>
+
+<script>
+    // Script para forçar a atualização do CSS automaticamente
+    (function() {
+        const links = document.getElementsByTagName('link');
+        for (let i = 0; i < links.length; i++) {
+            if (links[i].rel === 'stylesheet') {
+                links[i].href += (links[i].href.indexOf('?') > -1 ? '&' : '?') + 'update=' + new Date().getTime();
+            }
+        }
+    })();
+</script>
 </body>
 </html>
