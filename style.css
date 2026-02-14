@@ -269,11 +269,11 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* MUDANÇA CRUCIAL: Trava a altura em 80% do banner para o frasco aparecer inteiro */
-    background-size: auto 80% !important; 
+    /* 1. FAZ O PERFUME APARECER INTEIRO (SEM CORTES) */
+    background-size: contain !important; 
     
-    /* POSIÇÃO: Centraliza o perfume à direita com margem de segurança */
-    background-position: right 10% center !important; 
+    /* 2. MOVE O PERFUME PARA A DIREITA COM RESPIRO */
+    background-position: calc(100% - 100px) center !important; 
     background-repeat: no-repeat !important;
     
     opacity: 0;
@@ -287,12 +287,8 @@ nav a:hover, .gold-link {
 .slide.active {
     opacity: 1 !important;
 }
-/* Garante que o texto tenha prioridade visual */
-.banner-content h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3.2rem;
-    color: var(--branco);
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.9);
-    margin: 0;
-    line-height: 1.1;
+/* Garante que o texto não fique em cima do perfume */
+.banner-content {
+    max-width: 45%; 
+    z-index: 10;
 }
