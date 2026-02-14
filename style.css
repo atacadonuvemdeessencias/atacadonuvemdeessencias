@@ -302,19 +302,23 @@ nav a:hover, .gold-link {
     margin-top: 15px;
     font-weight: 400;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-}
 .slide-dior {
-    /* Em vez de 'cover', use '70%' para dar respiro em cima e embaixo */
-    background-size: auto 60% !important; 
+    /* Define que a altura do frasco deve ser 75% da altura do banner para igualar ao D&G */
+    background-size: auto 75% !important; 
     
-    /* Move o perfume para a direita para não atropelar o texto */
-    background-position: 85% center !important; 
+    /* Alinha o frasco exatamente na mesma posição lateral do D&G */
+    background-position: calc(100% - 100px) center !important; 
     
     background-repeat: no-repeat !important;
-    background-color: #05070a !important; /* Cor de fundo para sumir a borda */
+    background-color: #05070a !important; 
+    
+    /* Suaviza as bordas para integração total */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
-/* Garante que o conteúdo do texto fique alinhado à esquerda */
+
+/* Garante que o texto DIOR fique na mesma altura e distância da borda que o D&G */
 .slide-dior .banner-content {
-    margin-left: 5%;
-    text-align: left;
+    padding-left: 10%; /* Ajuste para bater com o padding do slide geral */
+    max-width: 500px;
 }
