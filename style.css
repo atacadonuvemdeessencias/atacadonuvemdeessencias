@@ -96,11 +96,11 @@ nav a:hover, .gold-link {
     letter-spacing: 0.5px;
 }
 
-/* --- CONFIGURAÇÃO UNITÁRIA DO SLIDER (EQUILIBRADO) --- */
+/* --- CONFIGURAÇÃO GERAL DO SLIDER --- */
 .banner-slider {
     position: relative;
     width: 100%;
-    height: 450px; 
+    height: 450px; /* Altura fixa para garantir a proporção */
     overflow: hidden;
     background-color: var(--preto-puro);
 }
@@ -113,13 +113,12 @@ nav a:hover, .gold-link {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0 10%; /* Mantém o texto de ambos exatamente no mesmo ponto */
+    padding: 0 10%; /* Alinhamento horizontal do texto */
     opacity: 0;
     transition: opacity 1s ease-in-out;
     background-repeat: no-repeat !important;
 
-    /* Suavização das bordas para integração com o fundo escuro */
+    /* Máscara para suavizar bordas e evitar cortes secos */
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
     mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
@@ -129,30 +128,22 @@ nav a:hover, .gold-link {
     z-index: 1;
 }
 
-/* --- AJUSTE EXCLUSIVO: DOLCE & GABBANA --- */
+/* --- AJUSTE: DOLCE & GABBANA --- */
 .slide-dg {
-    /* Ocupa 85% da altura para manter o impacto */
-    background-size: auto 85% !important; 
-    /* Fixado em 75% para não atropelar o texto */
+    background-size: auto 85% !important; /* Altura controlada do frasco */
     background-position: 75% center !important; 
     background-color: var(--preto-puro);
 }
 
-.slide-dg .banner-content p {
-    color: #e2c275; 
-}
-
-/* --- AJUSTE EXCLUSIVO: DIOR --- */
+/* --- AJUSTE: DIOR (CORRIGIDO) --- */
 .slide-dior {
-    /* REDUZIDO: 65% de altura para compensar a largura maior do frasco Sauvage */
-    background-size: auto 65% !important; 
-    /* AUMENTADO: 80% para afastar o perfume do texto, já que o frasco é largo */
-    background-position: 80% center !important; 
-    background-color: #05070a; 
-}
-
-.slide-dior .banner-content p {
-    color: #e5e5e5; 
+    /* Força o frasco a ficar dentro do limite de 450px com respiro */
+    background-size: auto 75% !important; 
+    background-position: 75% center !important; 
+    background-color: #05070a;
+    
+    /* Aumenta a vivacidade da imagem para não parecer apagada */
+    filter: contrast(1.1) brightness(1.2); 
 }
 
 /* --- TEXTOS (PADRONIZADOS) --- */
@@ -164,7 +155,16 @@ nav a:hover, .gold-link {
 .banner-content h1 {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
-    letter-spacing: 4px;
+    color: var(--branco);
     text-transform: uppercase;
     margin: 0;
 }
+
+.banner-content p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* Cores específicas das fontes */
+.slide-dg .banner-content p { color: #e2c275; } /* Dourado DG */
+.slide-dior .banner-content p { color: #e5e5e5; } /* Prata Dior */
