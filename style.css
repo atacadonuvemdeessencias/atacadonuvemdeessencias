@@ -148,19 +148,34 @@ nav a:hover, .gold-link {
     -webkit-mask-image: radial-gradient(circle at 80%, black 40%, transparent 95%);
 }
 
-/* --- TEXTO DIOR (ULTRA LEITURA) --- */
+/* --- TEXTO DIOR COM VIDA E IMPACTO --- */
 .slide-dior .banner-content h1 {
     color: #ffffff !important;
-    font-weight: 700;
-    letter-spacing: 5px;
-    /* Sombra múltipla para criar um contorno invisível que protege a letra */
-    text-shadow: 0 0 20px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.8);
+    font-family: 'Cinzel', serif; /* Fonte clássica de luxo */
+    font-weight: 800;
+    font-size: 4rem; /* Aumentado para dar mais presença */
+    letter-spacing: 12px; /* Espaçamento largo digno de grife */
+    text-transform: uppercase;
+    
+    /* Camadas de sombra: a primeira cria nitidez, a segunda cria um brilho (glow) */
+    text-shadow: 
+        0 0 15px rgba(0, 0, 0, 1), 
+        0 0 30px rgba(255, 255, 255, 0.3); 
+    
+    filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.8));
+    margin-bottom: 20px;
 }
 
 .slide-dior .banner-content p {
-    color: #d1d9e6 !important; /* Tom mais claro que o anterior para ganhar destaque */
+    /* COR RECOMENDADA: Prata Diamante (#e0e6ed) 
+       Ela é mais viva que o cinza e mais elegante que o branco puro */
+    color: #e0e6ed !important; 
+    font-size: 1.3rem;
     font-weight: 500;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 8px rgba(0,0,0,1);
-    max-width: 400px; /* Estreita o texto para não avançar sobre o perfume */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    
+    /* Linha decorativa dourada fina abaixo da frase para conectar com o logo */
+    border-left: 3px solid var(--dourado);
+    padding-left: 15px;
 }
