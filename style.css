@@ -112,19 +112,20 @@ nav a:hover, .gold-link {
     width: 100%;
     height: 100%;
     
-    /* 1. Faz o perfume crescer (ajuste de 50% a 70% conforme seu gosto) */
-    background-size: 65% !important; 
+    /* 1. Tamanho: Ajusta para o perfume ficar imponente sem ser cortado */
+    background-size: auto 85% !important; 
     
-    /* 2. Posição: Traz o perfume para mais perto do centro */
-    background-position: right 5% center !important; 
+    /* 2. O COMANDO CERTO: 70% traz o perfume para perto do nome */
+    /* Se quiser mais perto, use 65%. Se quiser mais longe, use 75% */
+    background-position: 70% center !important; 
+    
     background-repeat: no-repeat !important;
-    
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
     align-items: center;
     padding: 0 8%;
-    background-color: var(--preto-puro);
+    background-color: var(--azul-escuro);
 }
 
 .slide.active {
