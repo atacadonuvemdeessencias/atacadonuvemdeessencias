@@ -137,47 +137,30 @@ nav a:hover, .gold-link {
     color: #e2c275; /* Dourado luxo DG */
 }
 
-/* --- AJUSTE DIOR (FINALIZADO) --- */
+/* --- AJUSTE DIOR (INTEGRAÇÃO TOTAL) --- */
 .slide-dior {
-    /* Cor que funde com a fumaça da Dior */
     background-color: #080c12 !important; 
-    background-size: auto 78% !important;
-    background-position: 85% center !important;
+    background-size: auto 80% !important; /* Aumentado para preencher melhor o espaço */
+    background-position: 82% center !important; 
     
-    /* Máscara lateral mais agressiva para apagar qualquer borda da imagem */
-    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    /* Máscara radial para suavizar TODAS as bordas da imagem, não só as laterais */
+    mask-image: radial-gradient(circle at 80%, black 40%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle at 80%, black 40%, transparent 95%);
 }
 
+/* --- TEXTO DIOR (ULTRA LEITURA) --- */
 .slide-dior .banner-content h1 {
-    color: #f8f9fa; /* Branco gelo para maior nitidez */
-    /* Sombra pesada para o nome Dior "saltar" da fumaça clara */
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+    color: #ffffff !important;
+    font-weight: 700;
+    letter-spacing: 5px;
+    /* Sombra múltipla para criar um contorno invisível que protege a letra */
+    text-shadow: 0 0 20px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.8);
 }
 
 .slide-dior .banner-content p {
-    /* Cor prata metálica azulada para combinar com o Sauvage */
-    color: #a0acbd !important;
-    font-weight: 600;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-/* --- TEXTOS GERAIS --- */
-.banner-content {
-    max-width: 550px;
-    z-index: 2;
-}
-
-.banner-content h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.banner-content p {
-    font-size: 1.1rem;
-    margin-top: 15px;
-    letter-spacing: 0.5px;
+    color: #d1d9e6 !important; /* Tom mais claro que o anterior para ganhar destaque */
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0,0,0,1);
+    max-width: 400px; /* Estreita o texto para não avançar sobre o perfume */
 }
