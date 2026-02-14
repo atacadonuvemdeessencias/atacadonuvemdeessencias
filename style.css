@@ -270,7 +270,7 @@ nav a:hover, .gold-link {
     height: 100%;
     
     /* Configurações de Luxo */
-    background-size: cover !important; 
+    background-size: auto 85% !important; 
     background-position: 85% center !important; /* Move o perfume para 85% da largura, centralizando-o melhor */
     background-repeat: no-repeat !important;
     
