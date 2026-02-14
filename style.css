@@ -303,11 +303,24 @@ nav a:hover, .gold-link {
     font-weight: 400;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
+/* Ajuste específico para o slide Dior */
 .slide-dior {
-    /* Isso vai "esfumar" as bordas laterais da sua imagem dior.png */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    /* Diminui o tamanho da imagem para o frasco não ficar gigante */
+    background-size: contain !important; 
     
-    /* Garante que o fundo do banner seja o azul escuro da Dior */
-    background-color: #0a0d10 !important;
+    /* Empurra o perfume para a direita, deixando espaço para o texto */
+    background-position: 85% center !important; 
+    
+    /* Garante que o fundo seja a cor escura exata da Dior */
+    background-color: #05070a !important; 
+    
+    /* Suaviza as bordas da imagem para sumir com o corte seco */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+/* Garante que o conteúdo do texto fique alinhado à esquerda */
+.slide-dior .banner-content {
+    margin-left: 5%;
+    text-align: left;
 }
