@@ -113,14 +113,14 @@ nav a:hover, .gold-link {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 10%; /* Alinhamento horizontal do texto */
+    padding: 0 10%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     background-repeat: no-repeat !important;
 
-    /* Máscara para suavizar bordas e evitar cortes secos */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    /* ESTE É O CÓDIGO CHAVE: Ele esfumaça as 4 bordas da imagem */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .slide.active {
@@ -128,24 +128,22 @@ nav a:hover, .gold-link {
     z-index: 1;
 }
 
-/* --- AJUSTE: DOLCE & GABBANA --- */
+/* --- AJUSTE DG --- */
 .slide-dg {
-    background-size: auto 82% !important; /* Ajuste fino de escala */
-    background-position: 80% center !important; 
+    background-size: auto 82% !important;
+    background-position: 80% center !important;
     background-color: #00050a;
 }
 
-/* --- AJUSTE: DIOR --- */
+/* --- AJUSTE DIOR: Recuperando o Destaque --- */
 .slide-dior {
-    /* 68% faz ele ter a mesma altura visual que o DG tem com 82% */
-    background-size: auto 68% !important; 
-    background-position: 80% center !important; 
+    background-size: auto 75% !important; /* Aumentado de 68 para 75 para dar mais presença */
+    background-position: 85% center !important; /* Empurrado um pouco mais para a direita */
     background-color: #05070a;
     
-    /* Filtro para brilho e nitidez máxima */
-    filter: brightness(1.1) contrast(1.1) saturate(1.1); 
+    /* Filtro para o frasco brilhar mais e não ficar opaco */
+    filter: brightness(1.2) contrast(1.1) saturate(1.1); 
 }
-
 /* Ajuste de respiro do texto para não colarem no canto */
 .banner-content {
     padding-left: 20px; 
