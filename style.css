@@ -304,16 +304,14 @@ nav a:hover, .gold-link {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 .slide-dior {
-    /* Em vez de 'cover', usamos 'contain' para o frasco não ser cortado */
-    background-size: contain !important; 
+    /* Em vez de 'cover', use '70%' para dar respiro em cima e embaixo */
+    background-size: auto 60% !important; 
     
-    /* Ou use uma porcentagem para controlar o zoom (ex: 70% da altura) */
-    /* background-size: auto 75% !important; */
-
-    /* Garante que ele fique alinhado à direita com respiro lateral */
-    background-position: 90% center !important; 
+    /* Move o perfume para a direita para não atropelar o texto */
+    background-position: 85% center !important; 
     
     background-repeat: no-repeat !important;
+    background-color: #05070a !important; /* Cor de fundo para sumir a borda */
 }
 /* Garante que o conteúdo do texto fique alinhado à esquerda */
 .slide-dior .banner-content {
