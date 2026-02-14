@@ -137,52 +137,52 @@ nav a:hover, .gold-link {
     color: #e2c275; /* Dourado luxo DG */
 }
 
-/* --- ESTILO LUXO DIOR (SEM BORDAS) --- */
+/* --- ESTILO LUXO DIOR (SEM BORDAS E COM TONALIDADE PRESERVADA) --- */
 .slide-dior {
-    background-color: #000c1d !important; 
-    background-size: contain !important; /* 'contain' evita que a imagem corte ou estoure */
-    background-position: 90% center !important; /* Move o perfume mais para a direita */
+    background-color: #000c1d !important; /* Mantém a base escura para o texto brilhar */
+    background-size: contain !important; 
+    background-position: 92% center !important; /* Move o perfume levemente para a direita, dando respiro */
     
-    /* MÁSCARA RADIAL: Esfumaça as bordas em círculo, eliminando os quadrados visíveis */
-    mask-image: radial-gradient(circle at 85% 50%, black 30%, transparent 85%);
-    -webkit-mask-image: radial-gradient(circle at 85% 50%, black 30%, transparent 85%);
+    /* MÁSCARA RADIAL: O segredo para sumir com os quadrados da imagem sem tirar o brilho central */
+    mask-image: radial-gradient(circle at 85% 50%, black 40%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle at 85% 50%, black 40%, transparent 95%);
 }
 
-/* --- AJUSTE DE CONTEÚDO (PARA NÃO ATROPELAR) --- */
+/* --- AJUSTE DE CONTEÚDO (EVITA QUE A FRASE TOQUE NO PERFUME) --- */
 .slide-dior .banner-content {
-    max-width: 450px; /* Limita o texto para ele não chegar no perfume */
+    max-width: 420px; /* Reduzido para garantir que a frase não ultrapasse para a área clara */
     text-align: left;
+    z-index: 10;
 }
 
-/* --- NOME DA MARCA: BRANCO DIAMANTE PEROLADO --- */
+/* --- NOME DA MARCA: BRANCO DIAMANTE VIVO --- */
 .slide-dior .banner-content h1 {
-    /* Cor Branco Diamante Puro com brilho */
     color: #FFFFFF !important; 
     font-weight: 800;
-    letter-spacing: 15px; /* Estilo grife Dior */
+    font-size: 4.5rem; /* Aumentado para dar o destaque que você pediu */
+    letter-spacing: 15px; 
     text-transform: uppercase;
     
-    /* Efeito Diamante: Sombra que cria nitidez e um leve brilho externo (glow) */
+    /* Sombra Diamante: Camada de glow branco + sombra preta profunda para leitura total */
     text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.5), 
-        0 0 20px rgba(255, 255, 255, 0.2),
-        4px 4px 15px rgba(0, 0, 0, 0.9); /* Protege a letra contra a fumaça clara */
+        0 0 15px rgba(255, 255, 255, 0.4), 
+        4px 4px 15px rgba(0, 0, 0, 1); 
     
-    filter: brightness(1.1) contrast(1.1);
+    filter: brightness(1.2) contrast(1.1);
+    margin-bottom: 15px;
 }
 
-/* --- FRASE: PRATA ACETINADO --- */
+/* --- FRASE: PRATA ACETINADO COM ALTA DEFINIÇÃO --- */
 .slide-dior .banner-content p {
-    /* Cor Prata Acetinado (#D1D9E6) - Harmoniza com o frasco do Sauvage */
-    color: #D1D9E6 !important; 
+    color: #D1D9E6 !important; /* Tom compatível com os reflexos do Sauvage */
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 1.5px;
+    line-height: 1.5;
     
-    /* Sombra profunda para garantir leitura instantânea */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    /* Sombra reforçada para não sumir na fumaça cinza */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
     
-    /* Detalhe de luxo: uma pequena borda branca à esquerda */
     border-left: 3px solid #FFFFFF;
     padding-left: 20px;
 }
