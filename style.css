@@ -94,6 +94,18 @@ nav a:hover, .gold-link {
     letter-spacing: 0.5px;
 }
 
+.secao-titulo {
+    color: var(--dourado); /* Usa a variável que já criamos */
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--dourado); /* Linha fina abaixo do título */
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
 /* --- CONFIGURAÇÃO GERAL DO SLIDER --- */
 .banner-slider {
     position: relative;
