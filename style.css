@@ -128,7 +128,6 @@ nav a:hover, .gold-link {
 
 /* --- AJUSTE DOLCE & GABBANA --- */
 .slide-dg {
-    /* Reintroduzindo a imagem e o gradiente que você tinha */
     background-image: linear-gradient(90deg, #00050a 0%, rgba(0, 5, 10, 0.5) 45%, transparent 100%), 
                       url('img/theoneformen.png') !important;
     background-size: auto 82% !important;
@@ -136,33 +135,29 @@ nav a:hover, .gold-link {
     background-color: #00050a;
 }
 
-/* Container do texto: limita a largura para não cobrir o perfume */
+/* O SEGREDO ESTÁ AQUI: */
 .slide-dg .banner-content {
-    max-width: 550px; /* Ajuste este valor para controlar onde o texto "para" */
+    max-width: 400px; /* Isso cria o limite. Se a frase for maior que 400px, ela desce. */
     text-align: left;
-    z-index: 10;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Título Dolce & Gabbana: Grande e com destaque */
 .slide-dg .banner-content h1 {
-    font-size: 4rem; /* Aumentado para destaque */
+    font-size: 4rem; 
     font-weight: 700;
-    letter-spacing: 2px;
     margin-bottom: 5px;
     line-height: 1;
     color: var(--branco);
-    text-transform: uppercase;
 }
 
-/* Frase Dourada: Alinhada ao título */
 .slide-dg .banner-content p { 
-    color: #e2c275 !important; /* Dourado luxo DG */
+    color: #e2c275 !important;
     font-size: 1.2rem;
-    font-weight: 500;
     margin: 0;
-    letter-spacing: 0.5px;
-    /* Garante que a frase defina a largura máxima se o título for menor */
-    display: inline-block; 
+    /* Isso garante que o texto não "escape" do limite de 400px */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
 
 /* --- ESTILO LUXO DIOR (VERSÃO FINAL) --- */
