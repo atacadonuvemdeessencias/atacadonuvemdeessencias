@@ -128,6 +128,7 @@ nav a:hover, .gold-link {
 
 /* --- AJUSTE DOLCE & GABBANA --- */
 .slide-dg {
+    /* Mantendo sua imagem e o gradiente original */
     background-image: linear-gradient(90deg, #00050a 0%, rgba(0, 5, 10, 0.5) 45%, transparent 100%), 
                       url('img/theoneformen.png') !important;
     background-size: auto 82% !important;
@@ -135,29 +136,35 @@ nav a:hover, .gold-link {
     background-color: #00050a;
 }
 
-/* O SEGREDO ESTÁ AQUI: */
+/* ONDE VOCÊ DEVE MEXER PARA NÃO ULTRAPASSAR: */
 .slide-dg .banner-content {
-    max-width: 400px; /* Isso cria o limite. Se a frase for maior que 400px, ela desce. */
+    max-width: 350px; /* DIMINUA ESTE NÚMERO (ex: 300px) se ainda estiver encostando na imagem */
     text-align: left;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
+/* Título com destaque */
 .slide-dg .banner-content h1 {
-    font-size: 4rem; 
+    font-size: 3.8rem; /* Tamanho da letra para destaque */
     font-weight: 700;
-    margin-bottom: 5px;
-    line-height: 1;
+    line-height: 1; /* Deixa as linhas mais próximas */
+    margin-bottom: 10px;
     color: var(--branco);
+    text-transform: uppercase;
 }
 
+/* Frase dourada que agora vai quebrar linha se chegar no limite */
 .slide-dg .banner-content p { 
     color: #e2c275 !important;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     margin: 0;
-    /* Isso garante que o texto não "escape" do limite de 400px */
+    line-height: 1.3;
+    /* Força a quebra de linha caso o texto atinja os 350px */
+    display: block; 
     word-wrap: break-word; 
-    overflow-wrap: break-word;
 }
 
 /* --- ESTILO LUXO DIOR (VERSÃO FINAL) --- */
