@@ -26,7 +26,7 @@ function showNextSlide() {
     slides[currentSlide].classList.add('active');
 }
 
-// Inicia a troca automática a cada 5000ms (5 segundos)
+// Inicia a troca automática a cada 7000ms (5 segundos)
 if (slides.length > 0) {
-    setInterval(showNextSlide, 5000);
+    setInterval(showNextSlide, 7000);
 }
