@@ -94,16 +94,29 @@ nav a:hover, .gold-link {
     letter-spacing: 0.5px;
 }
 
-/* --- LINHA DOURADA (ESTILO LOGO) --- */
+/* --- LINHA DOURADA REFINADA --- */
 .divisor-dourado {
-    height: 1px; /* Linha fina é mais elegante */
+    height: 1px; /* Linha ultra fina para elegância */
     width: 100%;
+    /* Gradiente que "some" nas pontas para não cortar o layout abruptamente */
     background: linear-gradient(90deg, 
         transparent 0%, 
-        #c5a059 50%, 
+        var(--dourado) 50%, 
         transparent 100%);
-    box-shadow: 0px 0px 10px rgba(197, 160, 89, 0.5);
-    margin-bottom: 40px;
+    box-shadow: 0px 0px 12px rgba(197, 160, 89, 0.4); /* Glow suave */
+    position: relative;
+    z-index: 50;
+}
+
+/* Espaçamento específico para a linha abaixo da navbar */
+.navbar-sep {
+    margin-bottom: 0; /* Cola no banner para um efeito contínuo */
+}
+
+/* Espaçamento para a linha acima da vitrine */
+.divisor-dourado:not(.navbar-sep) {
+    margin-top: 20px;
+    margin-bottom: 50px; /* Dá respiro para o título "Nossas Fragrâncias" */
 }
 
 /* --- VITRINE ESCURA REFINADA --- */
