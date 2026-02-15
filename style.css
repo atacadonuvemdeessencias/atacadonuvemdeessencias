@@ -133,8 +133,38 @@ nav a:hover, .gold-link {
     background-color: #00050a;
 }
 
+/* Limitador para o texto não bater no perfume */
+.slide-dg .banner-content {
+    max-width: 50%; /* Garante que o texto ocupe apenas a metade esquerda */
+    text-align: left;
+    z-index: 10;
+}
+
+/* Título DG com tamanho aumentado */
+.slide-dg .banner-content h1 {
+    font-size: 4rem; /* Ajuste aqui o tamanho do destaque */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: var(--branco);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* Força o título a respeitar o limite do container */
+    word-wrap: break-word; 
+}
+
+/* Frase Dourada DG */
 .slide-dg .banner-content p { 
     color: #e2c275; /* Dourado luxo DG */
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+    
+    /* Garante que a frase não estique horizontalmente além do limite */
+    max-width: 100%; 
+    display: inline-block;
 }
 
 /* --- ESTILO LUXO DIOR (VERSÃO FINAL) --- */
