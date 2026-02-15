@@ -1,17 +1,17 @@
-/* Definição de Cores e Variáveis */
+/* --- DEFINIÇÃO DE CORES E VARIÁVEIS --- */
 :root {
-    --azul-escuro: #000c1d;
+    --azul-escuro: #000c1d;    /* Tom azul marinho profundo dos banners */
     --azul-card: #001226;
     --dourado: #c5a059;
     --dourado-claro: #fcf6ba;
     --gradiente-gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     --branco: #ffffff;
-    --preto-puro: #00050a;
+    --preto-puro: #00050a;     /* Reservado apenas para contrastes extremos */
 }
 
-/* Configuração Geral */
+/* --- CONFIGURAÇÃO GERAL --- */
 body {
-    background-color: var(--azul-escuro);
+    background-color: var(--azul-escuro); /* Mantém o fundo azul em todo o site */
     color: var(--branco);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
-    background: var(--preto-puro);
+    background: var(--azul-escuro); /* Unificado com o fundo */
     border-bottom: 1px solid rgba(197, 160, 89, 0.3);
     position: sticky;
     top: 0;
@@ -57,6 +57,7 @@ nav a:hover, .gold-link {
     color: var(--dourado) !important;
 }
 
+/* --- BOTÕES --- */
 .auth-buttons {
     display: flex;
     align-items: center;
@@ -78,7 +79,7 @@ nav a:hover, .gold-link {
 
 .btn-outline:hover {
     background: var(--branco);
-    color: var(--preto-puro);
+    color: var(--azul-escuro);
 }
 
 .btn-gold {
@@ -96,37 +97,35 @@ nav a:hover, .gold-link {
 
 /* --- LINHA DOURADA REFINADA --- */
 .divisor-dourado {
-    height: 1px; /* Linha ultra fina para elegância */
+    height: 1px;
     width: 100%;
-    /* Gradiente que "some" nas pontas para não cortar o layout abruptamente */
     background: linear-gradient(90deg, 
         transparent 0%, 
         var(--dourado) 50%, 
         transparent 100%);
-    box-shadow: 0px 0px 12px rgba(197, 160, 89, 0.4); /* Glow suave */
+    box-shadow: 0px 0px 12px rgba(197, 160, 89, 0.4);
     position: relative;
     z-index: 50;
+    margin-top: -1px; /* Remove frestas entre o banner e a vitrine */
 }
 
-/* Espaçamento específico para a linha abaixo da navbar */
 .navbar-sep {
-    margin-bottom: 0; /* Cola no banner para um efeito contínuo */
+    margin-bottom: 0;
 }
 
-/* Espaçamento para a linha acima da vitrine */
 .divisor-dourado:not(.navbar-sep) {
     margin-top: 20px;
-    margin-bottom: 50px; /* Dá respiro para o título "Nossas Fragrâncias" */
+    margin-bottom: 50px;
 }
 
-/* --- VITRINE ESCURA REFINADA --- */
+/* --- VITRINE --- */
 .vitrine {
-    background-color: #00050a; /* Preto profundo para destacar o catálogo */
+    background-color: var(--azul-escuro); /* Removido o preto para manter a tonalidade azul */
     padding: 20px 0 80px 0;
 }
 
 .secao-titulo {
-    color: #c5a059; /* Dourado da logo */
+    color: var(--dourado);
     font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -139,9 +138,8 @@ nav a:hover, .gold-link {
     padding-bottom: 15px;
 }
 
-/* --- CARDS DE PRODUTOS --- */
 .card-produto {
-    background: rgba(255, 255, 255, 0.03); /* Fundo branco quase invisível */
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 25px;
     border-radius: 4px;
@@ -151,13 +149,12 @@ nav a:hover, .gold-link {
 
 .card-produto:hover {
     background: rgba(255, 255, 255, 0.07);
-    border-color: #c5a059; /* Borda brilha em dourado no hover */
+    border-color: var(--dourado);
     transform: translateY(-10px);
 }
 
-/* Nomes dos Perfumes em BRANCO para destacar */
 .card-produto h3 {
-    color: #FFFFFF !important; 
+    color: var(--branco) !important; 
     font-size: 1.1rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -165,20 +162,20 @@ nav a:hover, .gold-link {
     margin-top: 20px;
 }
 
-/* Preços ou Detalhes em DOURADO */
 .preco-detalhe {
-    color: #c5a059;
+    color: var(--dourado);
     font-weight: 700;
     margin-top: 10px;
     font-size: 1.2rem;
 }
-/* --- CONFIGURAÇÃO GERAL DO SLIDER --- */
+
+/* --- BANNER SLIDER --- */
 .banner-slider {
     position: relative;
     width: 100%;
     height: 450px;
     overflow: hidden;
-    background-color: var(--preto-puro);
+    background-color: var(--azul-escuro);
 }
 
 .slide {
@@ -193,10 +190,6 @@ nav a:hover, .gold-link {
     opacity: 0;
     transition: opacity 1s ease-in-out;
     background-repeat: no-repeat !important;
-
-    /* Máscara Geral para suavizar as extremidades do banner */
-    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .slide.active {
@@ -204,60 +197,47 @@ nav a:hover, .gold-link {
     z-index: 1;
 }
 
-/* --- AJUSTE DOLCE & GABBANA --- */
+/* --- SLIDE DOLCE & GABBANA --- */
 .slide-dg {
-    /* Mantendo sua imagem e o gradiente original */
-    background-image: linear-gradient(90deg, #00050a 0%, rgba(0, 5, 10, 0.5) 45%, transparent 100%), 
+    background-image: linear-gradient(90deg, var(--azul-escuro) 0%, rgba(0, 12, 29, 0.5) 45%, transparent 100%), 
                       url('img/theoneformen.png') !important;
     background-size: auto 82% !important;
     background-position: 80% center !important;
-    background-color: #00050a;
+    background-color: var(--azul-escuro);
 }
 
-/* ONDE VOCÊ DEVE MEXER PARA NÃO ULTRAPASSAR: */
 .slide-dg .banner-content {
-    max-width: 350px; /* DIMINUA ESTE NÚMERO (ex: 300px) se ainda estiver encostando na imagem */
+    max-width: 350px;
     text-align: left;
-    display: flex;
-    flex-direction: column;
     z-index: 10;
 }
 
-/* Título com destaque */
 .slide-dg .banner-content h1 {
-    font-size: 3.8rem; /* Tamanho da letra para destaque */
+    font-size: 3.8rem;
     font-weight: 700;
-    line-height: 1; /* Deixa as linhas mais próximas */
+    line-height: 1;
     margin-bottom: 10px;
     color: var(--branco);
     text-transform: uppercase;
 }
 
-/* Frase dourada que agora vai quebrar linha se chegar no limite */
 .slide-dg .banner-content p { 
     color: #e2c275 !important;
     font-size: 1.1rem;
     font-weight: 500;
-    margin: 0;
     line-height: 1.3;
-    /* Força a quebra de linha caso o texto atinja os 350px */
-    display: block; 
-    word-wrap: break-word; 
 }
 
-/* --- ESTILO LUXO DIOR (VERSÃO FINAL COM IMAGEM) --- */
+/* --- SLIDE DIOR --- */
 .slide-dior {
-    /* O link da imagem foi adicionado abaixo junto com um gradiente de proteção */
     background-image: linear-gradient(90deg, 
-        rgba(0, 5, 15, 1) 0%, 
+        rgba(0, 12, 29, 1) 0%, 
         rgba(0, 12, 29, 0.7) 40%, 
         transparent 100%), 
-        url('img/dior.png') !important; 
-    
-    background-color: #000c1d !important; 
+        url('img/dior.png') !important; /* Caminho atualizado conforme solicitado */
+    background-color: var(--azul-escuro) !important; 
     background-size: contain !important;
-    background-position: 95% center !important; 
-    background-repeat: no-repeat !important;
+    background-position: 95% center !important;
 }
 
 .slide-dior .banner-content {
@@ -266,36 +246,23 @@ nav a:hover, .gold-link {
     z-index: 10;
 }
 
-/* NOME DA MARCA: EFEITO "NEON" BRANCO DE LUXO */
 .slide-dior .banner-content h1 {
-    color: #FFFFFF !important; 
+    color: var(--branco) !important; 
     font-weight: 800;
     font-size: 6.5rem; 
     letter-spacing: 20px; 
     text-transform: uppercase;
     line-height: 1;
-    margin-bottom: 15px;
-    
-    /* Múltiplas sombras para criar um brilho intenso e contorno nítido */
-    text-shadow: 
-        0 0 15px rgba(255, 255, 255, 0.6), 
-        0 0 30px rgba(255, 255, 255, 0.2),
-        4px 4px 15px rgba(0, 0, 0, 1); /* Sombra preta para separar da fumaça */
-    
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 4px 4px 15px rgba(0, 0, 0, 1);
     filter: brightness(1.4);
 }
 
-/* FRASE: BRANCO ACETINADO COM CONTRASTE */
 .slide-dior .banner-content p {
     color: #f0f0f0 !important; 
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    
-    border-left: 3px solid #FFFFFF; 
+    border-left: 3px solid var(--branco); 
     padding-left: 25px;
-    
-    /* Sombra pesada para garantir leitura sobre a imagem */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
 }
