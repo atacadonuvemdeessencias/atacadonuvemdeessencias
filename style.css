@@ -167,54 +167,52 @@ nav a:hover, .gold-link {
     word-wrap: break-word; 
 }
 
-/* --- ESTILO LUXO DIOR (VERSÃO FINAL COM IMAGEM) --- */
+/* --- ESTILO LUXO DIOR (VERSÃO VIVA) --- */
 .slide-dior {
-    /* Vinculando a imagem e criando um fundo escuro para o texto brilhar */
-    background-image: linear-gradient(90deg, #000c1d 25%, rgba(0, 12, 29, 0.4) 60%, transparent 100%), 
-                      url('img/dior.png') !important; /* Certifique-se que o nome do arquivo está correto */
+    /* Gradiente mais forte à esquerda para "limpar" a fumaça atrás do texto */
+    background-image: linear-gradient(90deg, 
+        rgba(0, 5, 15, 1) 0%, 
+        rgba(0, 12, 29, 0.8) 30%, 
+        transparent 100%), 
+        url('img/sauvage.png') !important;
     
     background-color: #000c1d !important; 
     background-size: contain !important;
     background-position: 95% center !important; 
-    background-repeat: no-repeat !important;
-
-    /* Efeito de esfumado nas bordas */
-    mask-image: radial-gradient(circle at 85% 50%, black 45%, transparent 95%);
-    -webkit-mask-image: radial-gradient(circle at 85% 50%, black 45%, transparent 95%);
 }
 
-.slide-dior .banner-content {
-    max-width: 650px; /* Espaço amplo para o destaque do nome */
-    text-align: left;
-    z-index: 10;
-}
-
-/* NOME DA MARCA: BRANCO VIVO E ESPAÇADO */
+/* NOME DA MARCA: BRANCO PEROLADO COM EFEITO ACESO */
 .slide-dior .banner-content h1 {
-    color: #FFFFFF !important; 
+    color: #f8f9fa !important; /* Branco perolado */
     font-weight: 800;
-    font-size: 6rem; 
-    letter-spacing: 25px; 
+    font-size: 6.5rem; /* Aumentado para máximo destaque */
+    letter-spacing: 22px; 
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 20px;
     
-    /* Múltiplas sombras para tirar o efeito "apagado" */
+    /* Efeito de iluminação: faz a letra parecer uma luminária de luxo */
     text-shadow: 
-        0 0 20px rgba(255, 255, 255, 0.3), 
-        3px 3px 10px rgba(0, 0, 0, 0.8);
+        0 0 10px rgba(255, 255, 255, 0.8), /* Brilho interno */
+        0 0 30px rgba(255, 255, 255, 0.3), /* Glow suave ao redor */
+        4px 4px 15px rgba(0, 0, 0, 1);     /* Sombra preta para separar do fundo */
     
-    filter: brightness(1.2);
+    filter: brightness(1.5); /* Força a saída da cor para ser mais vibrante */
 }
 
-/* FRASE ACETINADA */
+/* FRASE: DOURADO PLATINADO (Combina muito com a tampa/detalhes do perfume) */
 .slide-dior .banner-content p {
-    color: #FFFFFF !important; 
+    /* Mudamos para um prata/platinado para sair do branco apagado */
+    color: #e5e5e5 !important; 
     font-size: 1.4rem;
-    font-weight: 300;
-    letter-spacing: 3px;
+    font-weight: 400;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    border-left: 2px solid #FFFFFF;
+    
+    /* Linha lateral agora com brilho */
+    border-left: 3px solid #ffffff; 
     padding-left: 25px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    box-shadow: -5px 0 10px rgba(255, 255, 255, 0.2); 
+    
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
