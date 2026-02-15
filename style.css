@@ -113,6 +113,26 @@ nav a:hover, .gold-link {
     margin-bottom: 20px;
 }
 
+.vitrine {
+    background-color: #ffffff; /* Fundo Branco */
+    padding: 60px 0;
+    color: #00050a; /* Texto escuro para contrastar */
+}
+
+/* Ajustando o título para o fundo branco */
+.vitrine .secao-titulo {
+    color: #c5a059; /* Dourado da logo */
+    border-bottom: 2px solid #c5a059;
+    text-shadow: none; /* Remove o brilho (glow) que só funciona no escuro */
+}
+
+/* Ajustando o card para o fundo branco */
+.card-produto {
+    background: #f9f9f9;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
 /* --- CONFIGURAÇÃO GERAL DO SLIDER --- */
 .banner-slider {
     position: relative;
