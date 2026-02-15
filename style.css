@@ -106,6 +106,13 @@ nav a:hover, .gold-link {
     margin-bottom: 30px;
 }
 
+.divisor-dourado {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #c5a059, transparent); /* Gradiente que imita o brilho da logo */
+    margin-bottom: 20px;
+}
+
 /* --- CONFIGURAÇÃO GERAL DO SLIDER --- */
 .banner-slider {
     position: relative;
