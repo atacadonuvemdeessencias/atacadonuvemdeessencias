@@ -267,50 +267,50 @@ nav a:hover, .gold-link {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
 }
 
-/* --- SLIDE CAROLINA HERRERA --- */
+/* --- SLIDE CAROLINA HERRERA REFINADO --- */
 .slide-ch {
-    /* Gradiente ajustado: Começa no azul escuro e dá espaço para o sapato brilhar à direita */
+    /* Gradiente que transita do azul da marca para o vermelho, protegendo o texto */
     background-image: linear-gradient(90deg, 
         var(--azul-escuro) 0%, 
-        rgba(60, 0, 0, 0.8) 35%, 
+        rgba(60, 0, 0, 0.9) 30%, 
         transparent 70%), 
         url('img/chgoodgirl.png') !important;
     
     background-color: var(--azul-escuro) !important;
     
-    /* CORREÇÃO DO SAPATO: Usamos um valor percentual para controlar o tamanho exato */
-    background-size: 45% auto !important; /* Ajuste esse 45% para aumentar/diminuir o sapato */
+    /* 1. O segredo para o sapato aparecer todo: contain */
+    background-size: contain !important; 
     
-    /* POSIÇÃO: Garante que o salto e o bico apareçam totalmente à direita */
-    background-position: right 5% center !important; 
+    /* 2. Posicionamento para o sapato não "colar" na borda e aparecer por inteiro */
+    background-position: right 8% center !important; 
     background-repeat: no-repeat !important;
 }
 
 .slide-ch .banner-content h1 {
     color: var(--branco);
-    font-size: 4.5rem; /* Letra imponente */
+    font-size: 4rem; 
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 15px;
-    line-height: 1;
+    letter-spacing: 12px;
     
-    /* MELHORIA NO BRILHO: Efeito de profundidade com branco e vermelho */
+    /* 3. Brilho refinado: mistura de branco e um halo avermelhado */
     text-shadow: 
-        0 0 15px rgba(255, 255, 255, 0.5), 
-        0 0 30px rgba(255, 0, 0, 0.3),
+        0 0 15px rgba(255, 255, 255, 0.6), 
+        0 0 30px rgba(255, 0, 0, 0.2),
         4px 4px 15px rgba(0, 0, 0, 1);
 }
 
 .slide-ch .banner-content p {
     color: #f0f0f0 !important; 
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     
-    /* Estilo igual ao da Dior para harmonia total */
+    /* Mantendo o padrão visual das outras marcas luxuosas */
     border-left: 3px solid var(--branco); 
-    padding-left: 25px;
-    margin-top: 15px;
+    padding-left: 20px;
+    margin-top: 20px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
 }
+
