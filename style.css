@@ -197,15 +197,28 @@ nav a:hover, .gold-link {
     z-index: 1;
 }
 
-/* --- SLIDE DOLCE & GABBANA --- */
+/* --- SLIDE DOLCE & GABBANA OTIMIZADO --- */
 .slide-dg {
-    background-image: linear-gradient(90deg, var(--azul-escuro) 0%, rgba(0, 12, 29, 0.5) 45%, transparent 100%), 
-                      url('img/theoneformen.png') !important;
-    background-size: auto 82% !important;
-    background-position: 80% center !important;
-    background-color: var(--azul-escuro);
+    /* 1. Gradiente lateral mais suave para não "cortar" o perfume abruptamente */
+    background-image: linear-gradient(90deg, 
+        var(--azul-escuro) 0%, 
+        rgba(0, 12, 29, 0.6) 40%, 
+        transparent 85%), 
+        url('img/theoneformen.png') !important;
+    
+    background-color: var(--azul-escuro) !important;
+    
+    /* 2. Estilo Dior: Usamos o mask-image para suavizar TODAS as bordas da imagem */
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    
+    /* 3. Ajuste do tamanho para o frasco não ficar cortado (contain) */
+    background-size: contain !important;
+    background-position: 85% center !important; 
+    background-repeat: no-repeat !important;
 }
 
+/* --- Mantendo seu texto e frase originais como solicitado --- */
 .slide-dg .banner-content {
     max-width: 350px;
     text-align: left;
