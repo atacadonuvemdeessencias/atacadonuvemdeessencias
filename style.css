@@ -274,7 +274,7 @@ nav a:hover, .gold-link {
         var(--azul-escuro) 0%, 
         rgba(128, 0, 0, 0.4) 40%, 
         transparent 80%), 
-        url('img/chgoodgirl.png') !important;
+        url('img/chgoodgirl .png') !important;
     
     background-color: var(--azul-escuro) !important;
     
