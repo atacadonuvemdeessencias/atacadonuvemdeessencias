@@ -365,7 +365,7 @@ nav a:hover, .gold-link {
     padding-left: 20px;
 }
 
-/* --- AJUSTE ULTRA SUAVE PARA BORDAS INVISÍVEIS (YSL) --- */
+/* --- AJUSTE ULTRA SUAVE E ILUMINAÇÃO DE LUXO (YSL) --- */
 .slide-ysl {
     background-image: linear-gradient(90deg, 
         #000c1d 0%, 
@@ -378,28 +378,49 @@ nav a:hover, .gold-link {
     background-position: 85% center !important; 
     background-repeat: no-repeat !important;
     
-    /* O SEGREDO: Aumentamos o degradê da máscara para as bordas sumirem totalmente */
-    mask-image: linear-gradient(to right, 
-        transparent 0%, 
-        black 25%, 
-        black 75%, 
-        transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, 
-        transparent 0%, 
-        black 25%, 
-        black 75%, 
-        transparent 100%);
-    
-    /* Adicionamos uma máscara vertical para as bordas de cima e baixo não aparecerem */
+    /* MÁSCARAS PARA BORDAS INVISÍVEIS */
     mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%),
                 linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%),
+                        linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
     mask-composite: intersect;
     -webkit-mask-composite: source-in;
 }
 
-/* Garante que o conteúdo de texto da YSL siga o padrão de altura */
+/* CONTEÚDO E TIPOGRAFIA ILUMINADA */
 .slide-ysl .banner-content {
-    max-width: 500px;
+    max-width: 550px;
     text-align: left;
     z-index: 10;
+    margin-left: 8%;
+}
+
+.slide-ysl h1 {
+    color: #ffffff !important;
+    font-size: 3.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-bottom: 15px;
+    
+    /* Efeito de brilho branco intenso (estilo Dior) */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8), 
+        0 0 20px rgba(255, 255, 255, 0.4),
+        4px 4px 15px rgba(0, 0, 0, 0.9);
+    filter: brightness(1.2);
+}
+
+.slide-ysl p {
+    /* Dourado Champagne para destacar a frase de atacado */
+    color: #d4af37 !important; 
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    
+    /* Padronização com Dior e Givenchy */
+    border-left: 3px solid #ffffff;
+    padding-left: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
