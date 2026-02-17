@@ -365,24 +365,36 @@ nav a:hover, .gold-link {
     padding-left: 20px;
 }
 
-/* --- AJUSTE FINAL BANNER YSL LIBRE --- */
+/* --- AJUSTE ULTRA SUAVE PARA BORDAS INVISÍVEIS (YSL) --- */
 .slide-ysl {
     background-image: linear-gradient(90deg, 
-        var(--azul-escuro) 0%, 
-        rgba(0, 12, 29, 0.4) 40%, 
-        transparent 85%), 
+        #000c1d 0%, 
+        rgba(0, 12, 29, 0.8) 25%, 
+        transparent 60%), 
         url('img/libreedpyves.png') !important;
     
-    background-color: var(--azul-escuro) !important;
-    
-    /* Padronizado com Dior e Givenchy */
+    background-color: #000c1d !important;
     background-size: contain !important;
     background-position: 85% center !important; 
     background-repeat: no-repeat !important;
     
-    /* Aplica a mesma suavização dos outros */
-    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    /* O SEGREDO: Aumentamos o degradê da máscara para as bordas sumirem totalmente */
+    mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 25%, 
+        black 75%, 
+        transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 25%, 
+        black 75%, 
+        transparent 100%);
+    
+    /* Adicionamos uma máscara vertical para as bordas de cima e baixo não aparecerem */
+    mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%),
+                linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
 }
 
 /* Garante que o conteúdo de texto da YSL siga o padrão de altura */
